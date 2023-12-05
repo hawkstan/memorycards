@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=MedievalSharp&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    min-height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    background: #920511; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #920511 0%, #be6703 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#920511), color-stop(100%,#be6703)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #920511 0%,#be6703 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #920511 0%,#be6703 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #920511 0%,#be6703 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #920511 0%,#be6703 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#920511', endColorstr='#be6703',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(250, 241, 190);
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    transition: background-color .3s;
+}
+h1 {
+    font-family: 'Macondo Swash Caps', cursive;
+    font-size: 6.5rem;
+}
+h3{
+    font-family: 'MedievalSharp', cursive;
+    font-size: 4rem;
+    padding-bottom: 5rem;
+}
+a {
+    text-decoration: none;
+    color: rgb(223, 180, 102);
+}
+a:hover{
+    color: rgb(255, 221, 0);
+}
+ul {
+    list-style: none;
+}
+
+header{
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+header nav{ /* no responsive, should add warning */
+    padding-top: 3.5rem;
+    font-family: 'Overlock', sans-serif;
+    font-size: 1.8rem;
+    width: 60%;
+    margin: auto;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+header li a:hover{
+    font-weight: 700;
+}
+
+main{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-family: 'Overlock', sans-serif;
+}
+.home{
+    width: 60%;
+    margin: auto;
+}
+
+.tile{
+    background-color: rgb(223, 180, 102);
+    color: black;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: O O 5px 2px rgba(0, 0, 0, .3);
+}
+.glyph{
+    font-family: 'Noto Sans Egyptian Hieroglyphs';
+}
+.answer{
+    font-size: 2.5rem;
+}
+.help{
+    font-size: 1.9rem;
+    margin-top: 0.5rem;
+    color: rgb(26, 26, 26);
+}
+.sound{
+    color: inherit;
+    font-style: italic;
+    margin-bottom: 0.2rem;
+}
+
+footer {
+    padding-bottom: 2.5rem;
+    font-size: 1.4rem;
+    padding-top: 3rem;
+    color: rgb(223, 180, 102);
+}
+footer img{
+    filter: brightness(0);
+}
+.pyramids{
+    position: fixed;
+    left: 1.7rem;
+    bottom: -1.8rem;
+}
+.pyramids img {
+    height: 9rem;
+}
+.camel {
+    position: fixed;
+    left: 23.5rem;
+    bottom: -0.6rem;
+}
+.camel img {
+    height: 1rem;
+}
+.camel img:hover{
+    filter: invert(97%) sepia(37%) saturate(5687%) hue-rotate(353deg) brightness(109%) contrast(106%);
+}
+.infos{
+    padding-right: 2.5rem;
+    text-align: end;
+}
