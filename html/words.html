@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de mémoire</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body data-category="words">
+    <header>
+        <h1>Associa-Sons</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="one.html">Une lettre</a></li>
+                <li><a href="two.html">Deux lettres</a></li>
+                <li><a href="three.html">Trois lettres</a></li>
+                <li><a href="words.html">Mots communs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h3>Cartes de mots communs</h3>
+        <p class="home">Liste absolument non exhaustive, ceci est certains des mots des listes de vocabulaire que j'ai reçues durant mes premières années de cours.</p>
+        <div class="gameContainer" id="gameContainer">
+            <div class="column" id="glyphColumn"></div>
+            <div class="column" id="soundColumn"></div>
+        </div>
+        <button class="checkButton" onclick="checkPairs()">Check</button>
+    </main>
+    <footer>
+        <div class="infos">
+            <ul>
+                <li><a href="http://www.egypto.ulg.ac.be/">Section égyptologie ULg</a></li>
+                <li><a href="https://www.academia.edu/4461858/Grammaire_raisonn%C3%A9e_de_l%C3%A9gyptien_classique">Grammaire raisonnée de l'Égyptien classique</a></li>
+                <li>Conception du site par <a href="https://github.com/hawkstan">hawkstan</a></li>
+            </ul>
+        </div>
+        <div class="pyramids">
+            <img src="../styles/pyramids.png" alt="silhouette des pyramides" />
+        </div>
+        <div class="camel">
+            <a href="https://www.youtube.com/watch?v=4kvroKeu4DQ&t=0s" target="blank" >
+                <img src="../styles/camel.png" alt="silhouette d'un chameau" />
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
