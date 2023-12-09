@@ -9,9 +9,7 @@ html {
     font-size: 62.5%;
 }
 body {
-    min-height: 100vh;
     text-align: center;
-    font-size: 2rem;
     background: #920511; /* Old browsers */
     background: -moz-radial-gradient(center, ellipse cover,  #920511 0%, #be6703 100%); /* FF3.6+ */
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#920511), color-stop(100%,#be6703)); /* Chrome,Safari4+ */
@@ -27,16 +25,12 @@ body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
-    transition: background-color .3s;
 }
 h1 {
     font-family: 'Macondo Swash Caps', cursive;
-    font-size: 6.5rem;
 }
 h3{
     font-family: 'MedievalSharp', cursive;
-    font-size: 4rem;
-    padding-bottom: 5rem;
 }
 a {
     text-decoration: none;
@@ -48,24 +42,123 @@ a:hover{
 ul {
     list-style: none;
 }
+@media screen and (max-width: 699px){
+    h1{
+        font-size: 4.6rem;
+    }
+    h3{
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 700px){
+    h1{
+        font-size: 6.5rem;
+    }
+    h3{
+        font-size: 4rem;
+        margin-bottom: 5rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+}
 
-header{
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-}
-header nav{ /* no responsive, should add warning */
-    padding-top: 3.5rem;
+header nav{
     font-family: 'Overlock', sans-serif;
-    font-size: 1.8rem;
-    width: 60%;
-    margin: auto;
 }
-header nav ul{
-    display: flex;
-    justify-content: space-around;
+@media screen and (max-width: 699px) {
+    header{
+        padding-top: 2.5rem;
+    }
+    header nav{
+        display: none;
+    }
+    .burgerToggle {
+        background: none;
+        border: none;
+        padding: 3rem;
+        cursor: pointer;
+    }
+    .barTop, .barMid {
+        background-color: rgb(223, 180, 102);
+        height: 0.8rem;
+        width: 5rem;
+        margin: 0.5rem auto;
+        border-radius: 5rem;
+    }
+    .barBot{
+        background-color: rgb(223, 180, 102);
+        height: 0.8rem;
+        width: 3rem;
+        margin-left: 40%;
+        border-radius: 5rem;
+    }
+    .burgerMenu.open {
+        width: fit-content;
+        background-color: rgb(250, 241, 190);
+    }
+    .burgerMenu.open .burgerToggle{
+        position: relative;
+        left: 7rem;
+    }
+    .burgerMenu.open .barTop{
+        height: 0.9rem;
+        background-color: #920511;
+        transform: rotate(-45deg);
+        transition-duration: 0.4s;
+        translate: 0 0.65rem;
+    }
+    .burgerMenu.open .barMid{
+        height: 0.9rem;
+        background-color: #920511;
+        transform: rotate(45deg);
+        transition-duration: 0.4s;
+        translate: 0 -0.65rem;
+    }
+    .burgerMenu.open .barBot{
+        display: none;
+    }
+    header .burgerMenu.open nav{
+        display: block;
+        text-align: center;
+    }
+    header .burgerMenu.open nav li{
+        padding: 1rem;
+        border: 0.2rem solid #920511;
+    }
+    .burgerMenu{
+        z-index: 15;
+        width: fit-content;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
-header li a:hover{
-    font-weight: 700;
+@media screen and (min-width: 700px) {
+    .burgerToggle{
+        display: none;
+    }
+    header{
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    header nav{
+        padding-top: 3.5rem;
+        font-size: 1.8rem;
+        width: 60%;
+        margin: auto;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    header li a:hover{
+        font-weight: 700;
+    }
 }
 
 main{
@@ -77,8 +170,15 @@ main{
     width: 60%;
     margin: auto;
 }
-
+.gameContainer{
+    margin: auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
 .tile{
+    height: 15rem;
+    width: 12rem;
     background-color: rgb(223, 180, 102);
     color: black;
     border-radius: 1rem;
@@ -86,23 +186,35 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: O O 5px 2px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+    margin: 1rem;
 }
 .glyph{
     font-family: 'Noto Sans Egyptian Hieroglyphs';
+    font-size: 4rem;
 }
-.answer{
-    font-size: 2.5rem;
+.infoTile{
+    font-size: 2.8rem;
+    flex-flow: column;
 }
-.help{
-    font-size: 1.9rem;
+.sound, .trad{
+    font-size: 1.8rem;
     margin-top: 0.5rem;
-    color: rgb(26, 26, 26);
 }
 .sound{
-    color: inherit;
+    color: #920511;
     font-style: italic;
     margin-bottom: 0.2rem;
+}
+.checkButton{
+    font-family: inherit;
+    font-size: 2.4rem;
+    color: #920511;
+    background-color: rgb(250, 241, 190);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
 }
 
 footer {
